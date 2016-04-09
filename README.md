@@ -2,7 +2,9 @@
 QEmu QSDK extension
 
 # About
-This is a library that when linked to the QEmu version listed here https://github.com/gabriel-cr/qemu/tree/stable-2.5-qsdk, can load devices dynamically.
+This is a library that when linked to the QEmu version listed here https://github.com/gabriel-cr/qemu/tree/stable-2.5-qsdk, can load devices and boards dynamically.
+Right now it's focused on small-scale boards (e.g. Arduino Due).
+
 A device repository can be found here: https://github.com/gabriel-cr/device-repo
 
 # QEmu integration
