@@ -21,4 +21,4 @@ It does. QEmu already has some mechanisms for defining loadable devices and sett
 The project is not redefining the API for device development, but it attempts to add value to higher level development (e.g. SoCs).
 
 # Run
-For details on how to compile and run, read the README.md file here: https://github.com/gabriel-cr/qemu/blob/stable-2.5-qsdk
+For details on how to compile and run, read the README.md file here: https://github.com/gabriel-cr/qemu/tree/stable-2.5-qsdk
