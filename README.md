@@ -18,7 +18,7 @@ This project was branched off a start-up idea which didn't take off and since th
 It does. QEmu already has some mechanisms for defining loadable devices and setting object properties, but as development continues, I would like to integrate it nicely into QEmu.
 
 ### Why are you trying to redefine the API?
-The project is not redefining the API for device development, but it attempts to add value to higher level development (e.g. SoCs).
+The project is not redefining the API for device development, but it attempts to add value to higher level development (e.g. SoCs and boards).
 
 # Run
 For details on how to compile and run, read the README.md file here: https://github.com/gabriel-cr/qemu/tree/stable-2.5-qsdk
