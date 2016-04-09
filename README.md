@@ -2,42 +2,22 @@
 QEmu QSDK extension
 
 # About
-This is a library that when linked to the QEmu version listed here https://github.com/gabriel-cr/qemu/tree/stable-2.5-qsdk, can load devices and boards dynamically.
-Right now it's focused on small-scale boards (e.g. Arduino Due).
+This project consists of a library that links to a thin client added in QEmu, enabling it to load devices and boards dynamically.
 
-A device repository can be found here: https://github.com/gabriel-cr/device-repo
+The goal behind this project is to simplify the development of QEmu boards by adding modularity through loadable libraries and to define a friendlier API for writing new devices in other languages than C.
 
-# QEmu integration
-In terms of features it overlaps with QEmu in a few areas like device management and the object property system. This aspect will probably be improved in the future.
+### Why?
+This project was branched off a start-up idea which didn't take off and since then I've always wanted to open source some of it. 
 
-# Run it
-In order to run the projects you will have to compile QEmu, PGback and the device repository:
+### What can it do now?
+- loads so and pyc files dynamically
+- works and tested with Python and Rust devices (see https://github.com/gabriel-cr/device-repo for what modules are in the repo)
 
-```
-mkdir qsdk
-cd qsdk
-git clone https://github.com/gabriel-cr/device-repo.git
-git clone https://github.com/gabriel-cr/pgback
-git clone https://github.com/gabriel-cr/qemu.git
+### Doesn't it overlap with parts of QEmu?
+It does. QEmu already has some mechanisms for defining loadable devices and setting object properties, but as development continues, I would like to integrate it nicely into QEmu.
 
-cd pgback; 
-./make_prj.sh
-./deploy_qsdk.sh # Installs an environment variable that points to QSDK - will work on it in order to avoid this setup
+### Why are you trying to redefine the API?
+The project is not redefining the API for device development, but it attempts to add value to higher level development (e.g. SoCs).
 
-bash
-
-cd ../device-repo
-./make_prj.sh
-
-cd ../qemu
-git checkout -b stable-2.5-qsdk
-./configure_qsdk.sh
-make
-ln -s ../device_repo/lib # Create a symlink to the device repository library
-
-# Run -machine help to list the machines. The Arduino board should be listed as 'arduino_board'.
-./arm-softmmu/qemu-system-arm -machine help
-
-# Run QEmu with the demo found in device-repository. Make sure to point the -kernel argument to a binary file generated from Arduino
-./arm-softmmu/qemu-system-arm -M arduino_board -nographic -kernel ~/arduino_due.bin
-```
+# Run
+For details on how to compile and run, read the README.md file here: https://github.com/gabriel-cr/qemu/blob/stable-2.5-qsdk
