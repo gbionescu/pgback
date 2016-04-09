@@ -15,7 +15,7 @@ This project was branched off a start-up idea which didn't take off and since th
 - the device repository contains a very simple arduino due board that can print messages through the serial port
 
 ### Doesn't it overlap with parts of QEmu?
-It does. QEmu already has some mechanisms for defining loadable devices and setting object properties, but as development continues, I would like to integrate it nicely into QEmu.
+It does. QEmu already has some mechanisms for defining internal loadable devices and setting object properties, but as development continues, I would like to integrate it nicely into QEmu.
 
 ### Why are you trying to redefine the API?
 The project is not redefining the API for device development, but it attempts to add value to higher level development (e.g. SoCs and boards).
