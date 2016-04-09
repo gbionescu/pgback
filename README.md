@@ -12,6 +12,7 @@ This project was branched off a start-up idea which didn't take off and since th
 ### What can it do now?
 - loads so and pyc files dynamically
 - works and tested with Python and Rust devices (see https://github.com/gabriel-cr/device-repo for what modules are in the repo)
+- the device repository contains a very simple arduino due board that can print messages through the serial port
 
 ### Doesn't it overlap with parts of QEmu?
 It does. QEmu already has some mechanisms for defining loadable devices and setting object properties, but as development continues, I would like to integrate it nicely into QEmu.
